@@ -16,7 +16,7 @@ export default function Navigation() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-2xl font-serif font-bold text-primary">
-            Jecy Lab
+            Jency Lab
           </span>
         </Link>
 
