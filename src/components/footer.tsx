@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-xl font-serif font-bold text-primary">
+            <h3 className="text-xl font-sans font-bold text-primary">
               Jency Lab
             </h3>
             <p className="text-sm text-muted-foreground">
@@ -65,13 +65,10 @@ export default function Footer() {
                 <Mail className="h-4 w-4" />
                 <span>hello@artisansoaps.com</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <span>(555) 123-4567</span>
-              </li>
+             
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>Portland, Oregon</span>
+                <span>Toront, Canada</span>
               </li>
             </ul>
           </div>
