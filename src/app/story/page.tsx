@@ -69,7 +69,7 @@ export default function StoryPage() {
       {/* Hero */}
       <section className="py-16 md:py-20 bg-muted/30">
         <div className="container text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold">
+          <h1 className="text-4xl md:text-5xl font-sans font-bold">
             Our Story
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

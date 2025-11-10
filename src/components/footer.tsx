@@ -63,12 +63,12 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>hello@artisansoaps.com</span>
+                <span>jency.soap@gmail.com</span>
               </li>
              
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>Toront, Canada</span>
+                <span>Toronto, Canada</span>
               </li>
             </ul>
           </div>
@@ -78,17 +78,17 @@ export default function Footer() {
             <h4 className="font-semibold">Follow Us</h4>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/jencylab/"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Facebook className="h-5 w-5" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

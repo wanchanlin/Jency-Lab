@@ -85,8 +85,8 @@ export default function ContactPage() {
                       <div>
                         <p className="font-medium">Location</p>
                         <p className="text-sm text-muted-foreground">
-                          Portland, Oregon<br />
-                          United States
+                          Toronto, Ontario<br />
+                          Canada
                         </p>
                       </div>
                     </div>
@@ -111,17 +111,17 @@ export default function ContactPage() {
                   <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
                   <div className="flex gap-4">
                     <a 
-                      href="#" 
+                      href="https://www.instagram.com/jencylab/" 
                       className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
                     >
                       <Instagram className="h-5 w-5 text-primary" />
                     </a>
-                    <a 
+                    {/* <a 
                       href="#" 
                       className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
                     >
                       <Facebook className="h-5 w-5 text-primary" />
-                    </a>
+                    </a> */}
                   </div>
                 </CardContent>
               </Card>
