@@ -46,7 +46,7 @@ export default function Page() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=1600&q=80')",
+            backgroundImage: "url('/images/hero.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
