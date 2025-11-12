@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import SearchBar from "@/components/search-bar";
 import { ShoppingCart } from "lucide-react";
 
 const products = [
@@ -87,12 +89,36 @@ const products = [
 
 const categories = ["All", "Floral", "Citrus", "Herbal", "Natural", "Specialty"];
 
-export default function ProductsPage() {
+function ProductsContent() {
+  const searchParams = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredProducts = selectedCategory === "All" 
-    ? products 
-    : products.filter(p => p.category === selectedCategory);
+  // Initialize search query from URL params
+  useEffect(() => {
+    const searchParam = searchParams.get("search");
+    if (searchParam) {
+      setSearchQuery(searchParam);
+    }
+  }, [searchParams]);
+
+  const filteredProducts = useMemo(() => {
+    let filtered = selectedCategory === "All" 
+      ? products 
+      : products.filter(p => p.category === selectedCategory);
+
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(product =>
+        product.name.toLowerCase().includes(query) ||
+        product.description.toLowerCase().includes(query) ||
+        product.category.toLowerCase().includes(query) ||
+        product.ingredients.toLowerCase().includes(query)
+      );
+    }
+
+    return filtered;
+  }, [selectedCategory, searchQuery]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -110,9 +136,20 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Filters */}
+      {/* Search and Filters */}
       <section className="py-8 border-b">
-        <div className="container">
+        <div className="container space-y-6">
+          {/* Search Bar */}
+          <div className="flex justify-center">
+            <SearchBar
+              value={searchQuery}
+              onChange={setSearchQuery}
+              placeholder="Search products by name, description, or ingredients..."
+              className="w-full max-w-2xl"
+            />
+          </div>
+          
+          {/* Category Filters */}
           <div className="flex flex-wrap gap-2 justify-center">
             {categories.map((category) => (
               <Button
@@ -176,5 +213,28 @@ export default function ProductsPage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
+        <section className="py-16 md:py-20 bg-muted/30">
+          <div className="container text-center space-y-4">
+            <h1 className="text-4xl md:text-5xl font-sans font-bold">
+              Our Collection
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Loading...
+            </p>
+          </div>
+        </section>
+        <Footer />
+      </div>
+    }>
+      <ProductsContent />
+    </Suspense>
   );
 }

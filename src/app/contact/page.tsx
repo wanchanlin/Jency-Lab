@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock, Instagram, Facebook } from "lucide-react";
+import { createClient } from "@/lib/supabase/client";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -19,19 +20,42 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    
-    setTimeout(() => setSubmitted(false), 5000);
+    try {
+      const supabase = createClient();
+      
+      const { data, error: submitError } = await supabase
+        .from('contact_messages')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message
+          }
+        ])
+        .select();
+
+      if (submitError) {
+        throw submitError;
+      }
+
+      // Success
+      setSubmitted(true);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (err: any) {
+      console.error('Error submitting form:', err);
+      setError(err.message || 'Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -134,8 +158,14 @@ export default function ContactPage() {
                   <h3 className="font-semibold text-xl mb-6">Send Us a Message</h3>
                   
                   {submitted && (
-                    <div className="mb-6 p-4 bg-primary/10 text-primary rounded-lg">
+                    <div className="mb-6 p-4 bg-green-500/10 text-green-600 dark:text-green-400 rounded-lg border border-green-500/20">
                       Thank you for your message! We'll get back to you soon.
+                    </div>
+                  )}
+
+                  {error && (
+                    <div className="mb-6 p-4 bg-red-500/10 text-red-600 dark:text-red-400 rounded-lg border border-red-500/20">
+                      {error}
                     </div>
                   )}
 
