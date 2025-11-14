@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Sparkles, Leaf, Heart } from "lucide-react";
+import { ArrowRight, Sparkles, Leaf, Heart, Gift, Flower, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/navigation";
@@ -130,16 +130,16 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
               <div className="space-y-3">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                  <Leaf className="h-6 w-6 text-primary" />
+                  <Flower className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold">customized skincare</h3>
+                <h3 className="font-semibold">Customized Skincare</h3>
                 <p className="text-sm text-muted-foreground">
                   We offer customized skincare services to help you take care of your skin and body.
                 </p>
               </div>
               <div className="space-y-3">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                  <Heart className="h-6 w-6 text-primary" />
+                  <Package className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-semibold">Seasonal Skincare Packages</h3>
                 <p className="text-sm text-muted-foreground">
@@ -148,9 +148,9 @@ export default function Page() {
               </div>
               <div className="space-y-3">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                  <Sparkles className="h-6 w-6 text-primary" />
+                  <Gift className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold">Customized gift packages</h3>
+                <h3 className="font-semibold">Customized Gift Packages</h3>
                 <p className="text-sm text-muted-foreground">
                   We offer customized gift packages to help you take care of your skin and body.
                 </p>
