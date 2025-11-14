@@ -62,7 +62,7 @@ export default function Page() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button size="lg" asChild className="text-lg">
               <Link href="/products">
-                Shop Collection <ArrowRight className="ml-2 h-5 w-5" />
+                See Collection <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="text-lg">
@@ -73,42 +73,42 @@ export default function Page() {
       </section>
 
       {/* Brand Story Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-muted/30 bg-primary">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-sans font-bold">
+            <h2 className="text-3xl text-white md:text-4xl font-sans font-bold">
               Crafted by Hand, Inspired by Nature
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-white text-muted-foreground leading-relaxed">
               Every bar of soap we create is a labor of love. Using only the finest natural ingredients, 
               we craft each batch by hand in small quantities to ensure the highest quality. Our commitment 
               to sustainability and your skin's health drives everything we do.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
               <div className="space-y-3">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                <div className="w-12 h-12 rounded-full bg-white bg-primary/10 flex items-center justify-center mx-auto">
                   <Leaf className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold">100% Natural</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="font-semibold text-white">100% Natural</h3>
+                <p className="text-sm text-white text-muted-foreground">
                   Only pure, organic ingredients from trusted sources
                 </p>
               </div>
               <div className="space-y-3">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                  <Heart className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mx-auto">
+                  <Heart className="h-6  w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold">Handmade</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="font-semibold text-white">Handmade</h3>
+                <p className=" text-white text-sm text-muted-foreground">
                   Crafted in small batches with attention to detail
                 </p>
               </div>
               <div className="space-y-3">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                <div className="w-12 h-12  rounded-full bg-white flex items-center justify-center mx-auto">
                   <Sparkles className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold">Skin Loving</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="font-semibold text-white">Skin Loving</h3>
+                <p className="text-sm text-white text-muted-foreground">
                   Gentle formulas that nourish and protect
                 </p>
               </div>
