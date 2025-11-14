@@ -224,8 +224,8 @@ export default function Page() {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/10 to-background" />
         </div>
-        <div className="relative z-10 container mx-auto px-4 py-16 **md:grid md:grid-cols-2 md:gap-12**">
-        <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8 pt-8 mw-auto">
+        <div className=" z-10 container mx-auto px-4 py-16 grid  sm:grid-cols-1 md:grid-cols-2 gap-8 pt-8 mw-auto ">
+        {/* <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2  gap-8 pt-8 mw-auto"> */}
         
 
           {/* --- COLUMN 1: Visual Placeholder --- */}
@@ -260,7 +260,7 @@ export default function Page() {
                       Start Shopping
                   </a>
               </div>
-          </div>
+          
         </div>
     </div>
       
