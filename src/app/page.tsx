@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Sparkles, Leaf, Heart, Gift, Flower, Package } from "lucide-react";
+import { ArrowRight, Sparkles, Leaf, Heart, Gift, Flower, Package, Sprout } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/navigation";
@@ -84,10 +84,10 @@ export default function Page() {
               we craft each batch by hand in small quantities to ensure the highest quality. Our commitment 
               to sustainability and your skin's health drives everything we do.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
-              <div className="space-y-3">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-8">
+              <div className="space-y-4">
                 <div className="w-12 h-12 rounded-full bg-white bg-primary/10 flex items-center justify-center mx-auto">
-                  <Leaf className="h-6 w-6 text-primary" />
+                  <Sprout className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-white">100% Natural</h3>
                 <p className="text-sm text-white text-muted-foreground">
@@ -110,6 +110,16 @@ export default function Page() {
                 <h3 className="font-semibold text-white">Skin Loving</h3>
                 <p className="text-sm text-white text-muted-foreground">
                   Gentle formulas that nourish and protect
+                </p>
+              </div>
+              <div className="space-y-4">
+                <div className="w-12 h-12  rounded-full bg-white flex items-center justify-center mx-auto">
+                  <Leaf className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-white">Vegan Options
+                </h3>
+                <p className="text-sm text-white text-muted-foreground">
+                Plant-based recipes that are gentle on your skin and the planet.
                 </p>
               </div>
             </div>

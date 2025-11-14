@@ -29,9 +29,9 @@ export default function Navigation() {
               {link.label}
             </Link>
           ))}
-          <Button variant="ghost" size="icon">
+          {/* <Button variant="ghost" size="icon">
             <ShoppingCart className="h-5 w-5" />
-          </Button>
+          </Button> */}
         </div>
 
         {/* Mobile Navigation */}
@@ -52,10 +52,10 @@ export default function Navigation() {
                   {link.label}
                 </Link>
               ))}
-              <Button className="w-full mt-4">
+              {/* <Button className="w-full mt-4">
                 <ShoppingCart className="h-5 w-5 mr-2" />
                 Cart
-              </Button>
+              </Button> */}
             </div>
           </SheetContent>
         </Sheet>
