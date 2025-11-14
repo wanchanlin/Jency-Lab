@@ -46,7 +46,7 @@ export default function Page() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/hero.jpg')",
+            backgroundImage: "url('/images/hero.avif')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
@@ -214,21 +214,58 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
-        <div className="container text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-sans font-bold">
-            Experience Natural Beauty
-          </h2>
-          <p className="text-lg max-w-2xl mx-auto opacity-90">
-            Join thousands of happy customers who have discovered the difference 
-            handmade, natural soaps can make for their skin.
-          </p>
-          <Button size="lg" variant="secondary" asChild className="mt-4">
-            <Link href="/products">Start Shopping</Link>
-          </Button>
+   {/* CTA Section */}
+   <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden ">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/images/soap.jpg')",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/10 to-background" />
         </div>
+        <div className="relative z-10 container mx-auto px-4 py-16 **md:grid md:grid-cols-2 md:gap-12**">
+        <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8 pt-8 mw-auto">
+        
+
+          {/* --- COLUMN 1: Visual Placeholder --- */}
+          <div className="hidden md:flex items-center justify-center pt-8 md:pt-0">
+              {/* Replace this div with a high-quality image of soap or skincare products */}
+              {/* <div className="w-full max-w-sm h-64 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 border border-dashed border-gray-400">
+                  [Image Placeholder: Natural Soap Bar]
+              </div> */}
+          </div>
+            {/* === COLUMN 2: Text & Call to Action === */}
+            <div className="flex flex-col justify-center space-y-6 text-center md:text-left md:mw-auto">
+              <h2 className="text-3xl md:text-4xl font-sans font-bold">
+                  Experience Natural Skincare
+              </h2>
+              
+              <p className="text-lg max-w-2xl mx-auto md:mx-0 opacity-90">
+                  Join thousands of happy customers who have discovered the difference 
+                  handmade, natural soaps can make for their skin.
+              </p>
+              
+              <div className="mt-4 md:mt-0">
+                  {/* Assuming Button and Link components are available */}
+                  {/* <Button size="lg" variant="secondary" asChild>
+                      <Link href="/products">Start Shopping</Link>
+                  </Button> */}
+                  
+                  {/* Placeholder for the button component */}
+                  <a 
+                      href="/products" 
+                      className="inline-flex items-center justify-center rounded-md text-sm font-medium h-12 px-6 bg-green-600 text-white hover:bg-green-700 transition-colors shadow-lg"
+                  >
+                      Start Shopping
+                  </a>
+              </div>
+          </div>
+        </div>
+    </div>
+      
       </section>
+
 
       <Footer />
     </div>
