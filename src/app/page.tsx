@@ -189,7 +189,9 @@ export default function Page() {
                   <h3 className="font-semibold text-lg">{product.name}</h3>
                   <p className="text-sm text-muted-foreground">{product.description}</p>
                   <div className="flex items-center justify-between pt-2">
-                    <span className="text-lg font-bold text-primary">{product.price}</span>
+                    <span className="text-lg font-bold text-primary"> 
+                    {/* {product.price} */}
+                    </span>
                     <Button size="sm">View Collections</Button>
                   </div>
                 </CardContent>

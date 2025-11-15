@@ -2,13 +2,14 @@
 
 import { useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import SearchBar from "@/components/search-bar";
-import { products } from "../../data/collections";
+import { products } from "@/data/collections";
 
 const categories = ["All", "Floral", "Citrus", "Herbal", "Natural", "Specialty"];
 
@@ -109,16 +110,18 @@ function ProductsContent() {
                     <h3 className="font-semibold text-lg">{product.name}</h3>
                     <p className="text-sm text-muted-foreground mt-1">{product.description}</p>
                   </div>
+                  <div>
+                  <p className="text-sm font-bold text-muted-foreground mt-2">Ingredients</p>
                   <div className="flex items-center justify-center pt-2">
-                  <p className="text-sm text-muted-foreground mt-1">{product.ingredients}</p>
+                    <p className="text-sm text-muted-foreground ">{product.ingredients}</p>
+                  </div>
                   </div>
                   <div className="flex items-center justify-between pt-2">
                     <span className="text-xl font-bold text-primary">
-                      ${product.price.toFixed(2)}
+                      {/* ${product.price.toFixed(2)} */}
                     </span>
-                    <Button size="sm">
-                      {/* <ShoppingCart className="h-4 w-4 mr-2" /> */}
-                      Contact Us
+                    <Button size="sm" asChild>
+                      <Link href="/contact">Contact Us</Link>
                     </Button>
                   </div>
                 </CardContent>
