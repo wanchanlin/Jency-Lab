@@ -52,6 +52,15 @@ export const products = [
     image: "images/products/oceansalt.jpg",
     description: "A cooling blend of peppermint and eucalyptus inspired by the fresh ocean breeze.",
     ingredients: "Olive Oil, Coconut Oil, Salt, Milk, Essential Oil, Sodium Hydroxide"
+  },
+  {
+    id: 7,
+    name: "Orange",
+    price: 11.99,
+    category: "Herbal",
+    image: "images/products/oceansalt.jpg",
+    description: "A cooling blend of peppermint and eucalyptus inspired by the fresh ocean breeze.",
+    ingredients: "Olive Oil, Coconut Oil, Salt, Milk, Essential Oil, Sodium Hydroxide"
   }
 ];
 
