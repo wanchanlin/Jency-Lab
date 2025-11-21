@@ -55,12 +55,50 @@ export const products = [
   },
   {
     id: 7,
+    name: "Mint Salt",
+    price: 11.99,
+    category: "Herbal",
+    image: "images/products/mintsalt.jpg",
+    description: "A cooling blend of peppermint and eucalyptus inspired by the fresh ocean breeze.",
+    ingredients: "Olive Oil, Coconut Oil, Salt, Milk, Essential Oil, Sodium Hydroxide"
+  },
+  {
+    id: 8,
     name: "Orange",
     price: 11.99,
     category: "Herbal",
-    image: "images/products/oceansalt.jpg",
+    image: "images/products/orange.jpg",
+    description: "A cooling blend of peppermint and eucalyptus inspired by the fresh ocean breeze.",
+    ingredients: "Olive Oil, Coconut Oil, Salt, Milk, Essential Oil, Sodium Hydroxide"
+  },
+  {
+    id: 8,
+    name: "Lavender",
+    price: 11.99,
+    category: "Herbal",
+    image: "images/products/lavender.jpg",
+    description: "A cooling blend of peppermint and eucalyptus inspired by the fresh ocean breeze.",
+    ingredients: "Olive Oil, Coconut Oil, Salt, Milk, Essential Oil, Sodium Hydroxide"
+  },
+  {
+    id: 8,
+    name: "Dog",
+    price: 11.99,
+    category: "Herbal",
+    image: "images/products/dog.jpg",
+    description: "A cooling blend of peppermint and eucalyptus inspired by the fresh ocean breeze.",
+    ingredients: "Olive Oil, Coconut Oil, Salt, Milk, Essential Oil, Sodium Hydroxide"
+  },
+  {
+    id: 8,
+    name: "Tea",
+    price: 11.99,
+    category: "Herbal",
+    image: "images/products/Tea.jpg",
     description: "A cooling blend of peppermint and eucalyptus inspired by the fresh ocean breeze.",
     ingredients: "Olive Oil, Coconut Oil, Salt, Milk, Essential Oil, Sodium Hydroxide"
   }
+
+
 ];
 
