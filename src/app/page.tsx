@@ -51,7 +51,7 @@ export default function Page() {
   
 </div>
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/70 to-background z-[1]" />
         
         <div className="relative z-10 container text-center space-y-6 px-4">
           <h1 className="text-5xl md:text-7xl font-sans font-bold tracking-tight">
@@ -135,14 +135,22 @@ export default function Page() {
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-sans font-bold">
+            {/* <h2 className="text-3xl md:text-4xl font-sans font-bold">
+              Our Services
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              We offer a wide range of services to help you take care of your skin and body.
+            </p> */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-8">
+              <div className="space-y-3">
+                 <h2 className="text-3xl md:text-4xl font-sans font-bold">
               Our Services
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We offer a wide range of services to help you take care of your skin and body.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
-              <div className="space-y-3">
+              </div>
+              <div className="space-y-3 bg-primary/10 p-4 rounded-lg">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
                   <Flower className="h-6 w-6 text-primary" />
                 </div>
@@ -151,7 +159,7 @@ export default function Page() {
                   We offer customized skincare services to help you take care of your skin and body.
                 </p>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-3  bg-primary/10 p-4 rounded-lg">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
                   <Package className="h-6 w-6 text-primary" />
                 </div>
@@ -160,7 +168,7 @@ export default function Page() {
                   We offer seasonal skincare packages to help you take care of your skin and body.
                 </p>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-3 bg-primary/10 p-4 rounded-lg">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
                   <Gift className="h-6 w-6 text-primary" />
                 </div>
@@ -173,6 +181,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <hr className="my-4 border-t-8 border-dotted border-primary/10 container" />
 
       {/* Featured Products */}
       <section className="py-16 md:py-24">
