@@ -13,7 +13,7 @@ import Footer from "@/components/footer";
 import { products } from "@/data/collections";
 import CustomButton from "@/components/button";
 import Image from "next/image"; 
-import CTA from "@/components/cta1";
+import CTA from "@/components/cta2";
 
 type Product = {
   id: number;
