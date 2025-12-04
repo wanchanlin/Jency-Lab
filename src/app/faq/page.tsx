@@ -37,25 +37,7 @@ export default function FAQPage() {
   ];
 
   const faqSections = [
-    {
-      title: "Ordering & Shipping",
-      description: "Everything you need to know about timelines, delivery, and gift options.",
-      icon: Truck,
-      items: [
-        {
-          question: "How long does it take to process my order?",
-          answer: "Orders are crafted, packed, and ready to ship within 2–3 business days. You’ll receive tracking details as soon as the parcel leaves our studio.",
-        },
-        {
-          question: "Do you offer local pickup?",
-          answer: "Local pickup in Toronto is available upon request—just leave us a note at checkout and we’ll coordinate the handoff via email.",
-        },
-        {
-          question: "Can I send an order as a gift?",
-          answer: "Absolutely! Add a gift note during checkout and we’ll handwrite it on a recycled card. Prices are never included in gift shipments.",
-        },
-      ],
-    },
+   
     {
       title: "Ingredients & Safety",
       description: "Learn how we source, test, and label every bar.",
@@ -109,6 +91,25 @@ export default function FAQPage() {
         },
       ],
     },
+     {
+      title: "Ordering & Shipping",
+      description: "Everything you need to know about timelines, delivery, and gift options.",
+      icon: Truck,
+      items: [
+        {
+          question: "How long does it take to process my order?",
+          answer: "Orders are crafted, packed, and ready to ship within 2–3 business days. You’ll receive tracking details as soon as the parcel leaves our studio.",
+        },
+        {
+          question: "Do you offer local pickup?",
+          answer: "Local pickup in Toronto is available upon request—just leave us a note at checkout and we’ll coordinate the handoff via email.",
+        },
+        {
+          question: "Can I send an order as a gift?",
+          answer: "Absolutely! Add a gift note during checkout and we’ll handwrite it on a recycled card. Prices are never included in gift shipments.",
+        },
+      ],
+    },
   ];
 
   return (
@@ -132,7 +133,7 @@ export default function FAQPage() {
       </section>
 
       {/* Highlights */}
-      <section className="py-12 md:py-16">
+      {/* <section className="py-12 md:py-16">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {highlights.map((highlight) => {
@@ -155,7 +156,7 @@ export default function FAQPage() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Sections */}
       <section className="py-16 md:py-20 bg-muted/30 flex-1">
