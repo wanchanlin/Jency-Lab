@@ -48,6 +48,17 @@ useEffect(() => {
         markers: false, // show markers while debugging
       },
     });
+     gsap.to('.soap', {
+     
+      duration: 1,
+      ease: 'power1.out',
+      y: -50,
+      scale: 1.5,
+      scrollTrigger: {
+        trigger: '.soap',
+        markers: false, // show markers while debugging
+      },
+    });
   }, ref);
   return () => ctx.revert();
 }, []);
@@ -143,10 +154,10 @@ useEffect(() => {
                 </div>
               </div>
               <Image
-                className="mx-auto order-first md:order-none"
+                className="mx-auto mt-32 order-first md:order-none soap"
                 src="/images/soap.png"
                 alt="Handcrafted soap bars"
-                width={220}
+                width={160}
                 height={320}
               />
               <div className="space-y-6 ">
