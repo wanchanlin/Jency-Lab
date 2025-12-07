@@ -6,7 +6,6 @@ import {
   Leaf,
   Heart,
   Sprout,
- 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card"; // Added CardFooter
@@ -19,6 +18,7 @@ import CTA from "@/components/cta2";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import ScrollBadge from "@/components/scrollbadge";
 
 type Product = {
   id: number;
@@ -37,7 +37,9 @@ export default function Page() {
   useEffect(() => {
     if (typeof window === "undefined" || !ref.current) return;
     gsap.registerPlugin(ScrollTrigger);
+
     const ctx = gsap.context(() => {
+      // Hero section animation
       gsap.to(".box", {
         y: -100,
         duration: 1,
@@ -48,6 +50,8 @@ export default function Page() {
           markers: false,
         },
       });
+
+      // Soap image animation
       gsap.to(".soap", {
         duration: 1,
         ease: "power1.out",
@@ -58,7 +62,43 @@ export default function Page() {
           markers: false,
         },
       });
+
+      // Badge animation
+      const badge = document.getElementById('scrollBadge');
+      const trigger = document.getElementById('triggerElement');
+
+      if (badge && trigger) {
+        gsap.from(badge, {
+          scrollTrigger: {
+            trigger: trigger,
+            start: "top 80%",
+            end: "top 50%",
+            scrub: true,
+          },
+          opacity: 0,
+          scale: 0.5,
+          y: 50,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+
+        // Make it disappear when scrolling past
+        gsap.to(badge, {
+          scrollTrigger: {
+            trigger: trigger,
+            start: "bottom 20%",
+            end: "bottom 0%",
+            scrub: true,
+          },
+          opacity: 0,
+          scale: 0.5,
+          y: 50,
+          duration: 0.5,
+          ease: "power2.in"
+        });
+      }
     }, ref);
+
     return () => ctx.revert();
   }, []);
 
@@ -116,7 +156,7 @@ const featuredProducts = products.slice(0, 4).map((product: Product) => ({
           </div>
         </div>
       </section>
-
+ {/* <ScrollBadge /> */}
       {/* Brand Story Section */}
       <section className="py-16 md:py-24 bg-primary">
         <div className="container">
@@ -181,6 +221,8 @@ const featuredProducts = products.slice(0, 4).map((product: Product) => ({
             </div>
           </div>
         </div>
+        
+        
       </section>
 
       {/* Services Section */}
